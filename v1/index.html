@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Basil Pozdeev — Kubernetes platform engineer</title>
+  <meta name="description" content="Basil Pozdeev designs and runs Kubernetes platforms on Azure and AWS with Terraform and GitOps. Freelance, based in Breda, Netherlands.">
+  <meta name="author" content="Basil Pozdeev">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Basil Pozdeev — Kubernetes platform engineer">
+  <meta property="og:description" content="Kubernetes platforms on Azure and AWS, built with Terraform and delivered through GitOps. 160+ clusters run as one fleet.">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#EEF1F3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101A24" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314202B'/%3E%3Cg fill='%232F5BEA'%3E%3Ccircle cx='9' cy='10' r='3'/%3E%3Ccircle cx='17' cy='10' r='3'/%3E%3Ccircle cx='13' cy='17' r='3'/%3E%3Ccircle cx='9' cy='24' r='3'/%3E%3Ccircle cx='17' cy='24' r='3'/%3E%3C/g%3E%3Ccircle cx='24' cy='17' r='3' fill='%23E09B2D'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geologica:wght,SHRP@100..900,0..100&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top wrap">
+    <p class="top__status"><span class="pulse" aria-hidden="true"></span>Open to freelance contracts</p>
+    <nav class="top__nav" aria-label="Sections">
+      <a href="#results">Results</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="name">
+      <div class="hero__text">
+        <h1 id="name">Basil Pozdeev</h1>
+        <p class="hero__role">Kubernetes platform engineer. Multi-cloud on Azure and AWS, Terraform, GitOps.</p>
+        <p class="hero__intro">I design and run Kubernetes platforms for teams that ship a lot and can’t afford downtime. Most of my work has been in regulated Dutch banking and enterprise environments.</p>
+        <ul class="hero__links">
+          <li><a class="btn" href="mailto:basil.pozdeev@sediadigital.com">Email me</a></li>
+          <li><a href="https://www.linkedin.com/in/vpozdeev" rel="me">LinkedIn</a></li>
+          <li><a href="https://github.com/vaspoz" rel="me">GitHub</a></li>
+        </ul>
+        <p class="hero__where">Freelance since 2023, based in Breda, Netherlands.</p>
+      </div>
+
+      <figure class="fleet">
+        <div class="fleet__head">
+          <p class="fleet__title">The fleet I run today</p>
+          <p class="fleet__status" id="fleet-status"><span class="fleet__led" aria-hidden="true"></span><span id="fleet-status-text">161 of 161 clusters in sync</span></p>
+        </div>
+        <div class="fleet__stage" id="fleet-stage">
+          <canvas id="fleet" tabindex="0" role="img" aria-label="Map of 161 Kubernetes clusters: 146 on Azure AKS and 15 on AWS EKS, all in sync. Use arrow keys to inspect individual clusters." aria-describedby="fleet-caption"></canvas>
+          <p class="fleet__tip" id="fleet-tip" role="status" aria-live="polite" hidden></p>
+        </div>
+        <figcaption id="fleet-caption">
+          <span class="key key--azure" aria-hidden="true"></span>146 clusters on Azure,
+          <span class="key key--aws" aria-hidden="true"></span>15 on AWS. One platform.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="section wrap" id="results" aria-labelledby="results-h">
+      <div class="section__head">
+        <h2 id="results-h">Results</h2>
+        <p>Measured on client platforms I built and ran.</p>
+      </div>
+
+      <div class="section__body results">
+        <article class="shift">
+          <h3>Cluster provisioning</h3>
+          <p class="shift__after">About 1 hour</p>
+          <div class="scale" role="img" aria-label="Before: 6 months. After: about 1 hour.">
+            <div class="scale__row"><span class="scale__label">Before</span><span class="scale__bar scale__bar--full"></span><span class="scale__value">6 months</span></div>
+            <div class="scale__row"><span class="scale__label">After</span><span class="scale__bar scale__bar--tiny"></span><span class="scale__value">1 hour</span></div>
+          </div>
+          <p>Production-ready AKS clusters now come out of a library of 30+ Terraform modules instead of a months-long project.</p>
+        </article>
+
+        <article class="shift">
+          <h3>Deployments</h3>
+          <p class="shift__after">Near-instant</p>
+          <div class="scale" role="img" aria-label="Before: 20 to 30 minutes. After: near-instant.">
+            <div class="scale__row"><span class="scale__label">Before</span><span class="scale__bar scale__bar--full"></span><span class="scale__value">20–30 min</span></div>
+            <div class="scale__row"><span class="scale__label">After</span><span class="scale__bar scale__bar--tiny"></span><span class="scale__value">near-instant</span></div>
+          </div>
+          <p>ArgoCD reconciles 150+ clusters continuously, so a merged change reaches every cluster without a pipeline pushing to each one.</p>
+        </article>
+
+        <dl class="facts">
+          <div class="fact">
+            <dt>Azure subscriptions under policy</dt>
+            <dd><span class="fact__fig">1200+</span> Kept compliant by 100+ Azure Policies written as code.</dd>
+          </div>
+          <div class="fact">
+            <dt>Recovery targets</dt>
+            <dd><span class="fact__fig">1 h / 15 min</span> RTO and RPO, proven in quarterly disaster-recovery game days.</dd>
+          </div>
+          <div class="fact">
+            <dt>AWS accounts on one baseline</dt>
+            <dd><span class="fact__fig">20+</span> Shared SCP and IAM guardrails. New accounts are automated in minutes instead of a 30-minute manual run.</dd>
+          </div>
+          <div class="fact">
+            <dt>Clusters on one platform</dt>
+            <dd><span class="fact__fig">161</span> A cloud-agnostic platform that runs the same way on AKS and EKS.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section wrap" id="work" aria-labelledby="work-h">
+      <div class="section__head">
+        <h2 id="work-h">What I do</h2>
+      </div>
+      <dl class="section__body caps">
+        <div class="cap">
+          <dt>Platform engineering</dt>
+          <dd>Cloud-agnostic Kubernetes platforms that run the same on AKS and EKS: cluster provisioning, multi-tenancy, upgrades.</dd>
+        </div>
+        <div class="cap">
+          <dt>Infrastructure as code</dt>
+          <dd>Terraform module libraries and landing zones that turn months of setup into a pipeline run.</dd>
+        </div>
+        <div class="cap">
+          <dt>GitOps and delivery</dt>
+          <dd>ArgoCD, Helm and Kustomize, with CI/CD on GitHub Actions, GitLab CI or Azure Pipelines.</dd>
+        </div>
+        <div class="cap">
+          <dt>Reliability and observability</dt>
+          <dd>Prometheus, Grafana, Loki, Tempo and OpenTelemetry. SLOs, incident runbooks and disaster-recovery drills.</dd>
+        </div>
+        <div class="cap">
+          <dt>Guardrails</dt>
+          <dd>Policy as code with Azure Policy, OPA Gatekeeper and Kyverno, plus AWS SCPs and IAM.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="section wrap" id="experience" aria-labelledby="experience-h">
+      <div class="section__head">
+        <h2 id="experience-h">Experience</h2>
+      </div>
+      <ol class="section__body timeline">
+        <li class="job">
+          <p class="job__when"><time datetime="2023-09">Sep 2023</time> – now</p>
+          <div class="job__what">
+            <h3>Freelance Kubernetes platform and reliability engineer</h3>
+            <p class="job__where">Self-employed, Netherlands</p>
+            <p>Runs a 160+ cluster fleet across Azure and AWS. GitOps across 150+ clusters, 30+ Terraform modules, 100+ policies over 1200+ subscriptions, and a cloud-agnostic platform for AKS and EKS. Mentored a five-person DevOps team.</p>
+          </div>
+        </li>
+        <li class="job">
+          <p class="job__when"><time datetime="2022-09">Sep 2022</time> – <time datetime="2023-08">Aug 2023</time></p>
+          <div class="job__what">
+            <h3>Senior DevOps engineer</h3>
+            <p class="job__where">Ctac</p>
+            <p>Disaster-recovery engineering with RTO 1 hour and RPO 15 minutes, tested in quarterly game days. Built an AWS Landing Zone from 10+ Terraform modules, with SCP and IAM across 20+ accounts.</p>
+          </div>
+        </li>
+        <li class="job">
+          <p class="job__when"><time datetime="2022-02">Feb 2022</time> – now</p>
+          <div class="job__what">
+            <h3>Founder, alongside client work</h3>
+            <p class="job__where"><a href="https://0xcafe.news">0xcafe.news</a></p>
+            <p>A tech newsletter on serverless AWS: Lambda, DynamoDB and CloudFront, managed with Terraform across four environments. 1200+ subscribers.</p>
+          </div>
+        </li>
+        <li class="job">
+          <p class="job__when"><time datetime="2020-02">Feb 2020</time> – <time datetime="2022-08">Aug 2022</time></p>
+          <div class="job__what">
+            <h3>Senior system architect</h3>
+            <p class="job__where">Volksbank</p>
+            <p>Moved legacy applications onto Kubernetes across AWS and Azure in a regulated, 24/7 estate. Terraform-managed AWS infrastructure for an internal compliance system.</p>
+          </div>
+        </li>
+        <li class="job">
+          <p class="job__when"><time datetime="2018-11">Nov 2018</time> – <time datetime="2020-02">Feb 2020</time></p>
+          <div class="job__what">
+            <h3>Senior system architect</h3>
+            <p class="job__where">BNP Paribas Cardif</p>
+            <p>Architecture for two core business applications, and modernised CI/CD in a legacy estate.</p>
+          </div>
+        </li>
+        <li class="job">
+          <p class="job__when"><time datetime="2015-11">Nov 2015</time> – <time datetime="2018-10">Oct 2018</time></p>
+          <div class="job__what">
+            <h3>Senior fullstack engineer</h3>
+            <p class="job__where">EPAM Systems, Poland</p>
+            <p>Java Spring microservices, React and Redux front ends, PostgreSQL and MySQL.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section wrap" id="background" aria-labelledby="background-h">
+      <div class="section__head">
+        <h2 id="background-h">Background</h2>
+      </div>
+      <div class="section__body background">
+        <dl class="creds">
+          <div>
+            <dt>Certifications</dt>
+            <dd>CKA, Certified Kubernetes Administrator (CNCF)</dd>
+            <dd>AWS Certified Solutions Architect, Associate</dd>
+          </div>
+          <div>
+            <dt>Education</dt>
+            <dd>B.Sc. Information Systems and Technologies, Saint Petersburg Electrotechnical University (LETI)</dd>
+          </div>
+          <div>
+            <dt>Languages</dt>
+            <dd>English, fluent</dd>
+            <dd>Russian, native</dd>
+            <dd>Dutch, B1</dd>
+          </div>
+          <div>
+            <dt>Name</dt>
+            <dd>Vasilii on paper, Basil to everyone else.</dd>
+          </div>
+        </dl>
+
+        <dl class="tools">
+          <div>
+            <dt>Kubernetes</dt>
+            <dd>AKS, EKS, Helm, Kustomize, Istio, ArgoCD</dd>
+          </div>
+          <div>
+            <dt>Clouds and IaC</dt>
+            <dd>Azure, AWS, Terraform, Bicep, CloudFormation, AWS CDK</dd>
+          </div>
+          <div>
+            <dt>Delivery</dt>
+            <dd>GitHub Actions, GitLab CI, Azure Pipelines</dd>
+          </div>
+          <div>
+            <dt>Observability</dt>
+            <dd>Prometheus, Grafana, Loki, Tempo, OpenTelemetry</dd>
+          </div>
+          <div>
+            <dt>Policy</dt>
+            <dd>Azure Policy, OPA Gatekeeper, Kyverno</dd>
+          </div>
+          <div>
+            <dt>Code</dt>
+            <dd>Python, Bash, Go (reading)</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-h">
+      <div class="wrap contact__inner">
+        <h2 id="contact-h">Need a platform built, or one that’s grown messy put back in order?</h2>
+        <div class="contact__body">
+          <p class="contact__mail"><a href="mailto:basil.pozdeev@sediadigital.com">basil.pozdeev@sediadigital.com</a></p>
+          <p>Open to freelance contracts, remote or in the Netherlands. I work B2B in the Netherlands, or EU-wide through an employer of record.</p>
+          <ul class="contact__links">
+            <li><a href="https://www.linkedin.com/in/vpozdeev" rel="me">LinkedIn</a></li>
+            <li><a href="https://github.com/vaspoz" rel="me">GitHub</a></li>
+            <li><a href="https://0xcafe.news">0xcafe.news</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot wrap">
+    <p>Designed and built by me. <a href="mailto:basil.pozdeev@sediadigital.com?subject=Website">I also make websites for small businesses around Breda.</a></p>
+    <p>© 2026 Basil Pozdeev</p>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
