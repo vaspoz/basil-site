@@ -25,7 +25,7 @@ variable "github_user" {
 variable "github_pages_verification" {
   description = "Value of the _github-pages-challenge TXT record from GitHub account settings > Pages > Verified domains. Leave empty to skip."
   type        = string
-  default     = ""
+  default     = "b5f50581c6f7b842052d793fc3c1f2"
 }
 
 variable "ttl" {
