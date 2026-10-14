@@ -1,8 +1,6 @@
-# Site content (source of truth for all versions)
+# Site content
 
-Facts only from Basil's CV. Do not invent clients, numbers, or dates.
-Positioning: Kubernetes platform engineering + multi-cloud (Azure + AWS) first.
-Observability/SRE is part of the platform work. AI/ML is never a headline.
+The facts the site draws on. Edit here first, then in index.html.
 
 ## Identity
 

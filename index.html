@@ -2,43 +2,131 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Basil Pozdeev — three drafts</title>
-<meta name="robots" content="noindex">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232F5BEA'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='16' text-anchor='middle' fill='white'%3EBP%3C/text%3E%3C/svg%3E">
-<style>
-  :root { --bg: #f4f5f7; --ink: #15171c; --muted: #5c6270; --line: #d9dce2; --focus: #2f5bea; }
-  @media (prefers-color-scheme: dark) { :root { --bg: #15171c; --ink: #eceef2; --muted: #9aa0ac; --line: #2c3038; } }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
-  main { max-width: 44rem; margin: 0 auto; padding: 4rem 1rem; }
-  h1 { font-size: 1.6rem; margin: 0 0 .4rem; letter-spacing: -.01em; }
-  p { color: var(--muted); margin: 0 0 2.5rem; }
-  ol { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); }
-  li { border-bottom: 1px solid var(--line); }
-  a { display: grid; grid-template-columns: 6rem 1fr; gap: 1rem; padding: 1.25rem .25rem; color: inherit; text-decoration: none; }
-  a:hover strong { text-decoration: underline; text-underline-offset: 4px; }
-  a:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
-  strong { font-size: 1.15rem; }
-  span { color: var(--muted); }
-  @media (max-width: 480px) { a { grid-template-columns: 1fr; gap: .2rem; } }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Basil Pozdeev, Kubernetes platform engineer</title>
+<meta name="description" content="Basil Pozdeev builds and runs Kubernetes platforms on Azure and AWS: 161 clusters, cluster provisioning cut from six months to an hour, near-instant GitOps deploys. Based in Breda, the Netherlands.">
+<meta name="theme-color" content="#A9CDEE">
+<link rel="canonical" href="https://sediadigital.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sediadigital.com/">
+<meta property="og:title" content="Basil Pozdeev, Kubernetes platform engineer">
+<meta property="og:description" content="A small city on a floating island, built the way I build platforms: Azure and AWS, Terraform, GitOps.">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 13h24l-9 16z' fill='%23977257'/%3E%3Cellipse cx='16' cy='13' rx='12' ry='4' fill='%23A3CF86'/%3E%3Crect x='11' y='5' width='5' height='7' fill='%23F7F2EA'/%3E%3Cpath d='M10.5 5.5 13.5 2l3 3.5z' fill='%232F6FDE'/%3E%3Crect x='18' y='8' width='4' height='4' fill='%23F7F2EA'/%3E%3Cpath d='M17.5 8.5 20 6l2.5 2.5z' fill='%23F29A3A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script type="module" src="main.js"></script>
 </head>
 <body>
-<main>
-  <h1>Drafts of one site</h1>
-  <p>Same facts, different worlds. Pick one and it becomes the homepage.</p>
-  <ol>
-    <li><a href="v4/"><strong>Harbor</strong><span>A 3D harbor from dawn to night. Containers, cranes and departing ships stand for clusters, provisioning and deploys.</span></a></li>
-    <li><a href="v5/"><strong>Altitude</strong><span>A climb from the polders around Breda, through an Azure cloud and an AWS cloud, up to the night sky.</span></a></li>
-    <li><a href="v6/"><strong>Platform city</strong><span>A miniature city on a floating island that grows, links up and lights up as you scroll.</span></a></li>
-  </ol>
-  <p style="margin:3rem 0 1rem">Earlier drafts, heavier on text</p>
-  <ol>
-    <li><a href="v1/"><strong>Fleet</strong><span>Light and cool. The hero is the real cluster fleet, 146 on Azure and 15 on AWS, reconciling on load.</span></a></li>
-    <li><a href="v2/"><strong>Modules</strong><span>Dutch grid poster. The name is assembled from modules, like a Terraform apply.</span></a></li>
-    <li><a href="v3/"><strong>Lead time</strong><span>Dark scroll story. Six months of provisioning collapses into an hour as you scroll.</span></a></li>
-  </ol>
+<a class="skip" href="#contact">Skip to contact</a>
+
+<header class="bar">
+  <a class="bar-name" href="#top">Basil Pozdeev</a>
+  <a class="bar-mail" href="mailto:basil.pozdeev@sediadigital.com">Email me</a>
+</header>
+
+<div class="sky" aria-hidden="true"></div>
+<canvas class="stars" aria-hidden="true"></canvas>
+<div class="orb orb-sun" aria-hidden="true"></div>
+<div class="orb orb-moon" aria-hidden="true"></div>
+<canvas id="world" aria-hidden="true"></canvas>
+<div class="tilt tilt-top" aria-hidden="true"></div>
+<div class="tilt tilt-bottom" aria-hidden="true"></div>
+<div class="wash" aria-hidden="true"></div>
+
+<div class="captions" aria-hidden="true">
+  <div class="cap cap-hero" data-win="0,0,0.05,0.078">
+    <p class="name"><span>Basil</span> <span>Pozdeev</span></p>
+    <p class="role">Kubernetes platform engineer on Azure and AWS. Based in Breda.</p>
+  </div>
+  <div class="cap" data-win="0.1,0.122,0.2,0.226">
+    <p class="fig">6 months → 1 hour</p>
+    <p class="line">30+ Terraform modules snap together into a production cluster.</p>
+  </div>
+  <div class="cap" data-win="0.27,0.292,0.352,0.374">
+    <p class="fig">161 clusters</p>
+    <p class="line">Two clouds, one platform. Every district runs the same way.</p>
+  </div>
+  <div class="cap" data-win="0.396,0.416,0.474,0.496">
+    <p class="fig">Near-instant</p>
+    <p class="line">Deploys took 20–30 minutes. ArgoCD now reaches 150+ clusters at once.</p>
+  </div>
+  <div class="cap" data-win="0.52,0.54,0.6,0.622">
+    <p class="fig">1200+ subscriptions</p>
+    <p class="line">Kept inside the walls by 100+ policies, written as code.</p>
+  </div>
+  <div class="cap" data-win="0.644,0.664,0.722,0.744">
+    <p class="fig">RTO 1 h, RPO 15 min</p>
+    <p class="line">Rehearsed in quarterly game days, so the lights come back on.</p>
+  </div>
+  <div class="cap" data-win="0.764,0.784,0.85,0.872">
+    <p class="fig">Since 2015</p>
+    <p class="line">Banks and enterprise first. Freelance since 2023, CKA and AWS certified.</p>
+  </div>
+</div>
+
+<div class="labels" aria-hidden="true">
+  <div class="label" data-label="azure"><b>Azure</b><span>146 clusters</span></div>
+  <div class="label" data-label="aws"><b>AWS</b><span>15 clusters</span></div>
+  <div class="label" data-label="epam"><b>EPAM</b><span>2015</span></div>
+  <div class="label" data-label="bnp"><b>BNP Paribas Cardif</b><span>2018</span></div>
+  <div class="label" data-label="volksbank"><b>Volksbank</b><span>2020</span></div>
+  <div class="label" data-label="ctac"><b>Ctac</b><span>2022</span></div>
+</div>
+
+<div class="loader" aria-hidden="true">
+  <svg viewBox="0 0 120 90" role="presentation">
+    <path d="M14 40h92L66 86z" fill="#9C7759"/>
+    <path d="M30 40h40L52 70z" fill="#7F6F76" opacity=".55"/>
+    <ellipse cx="60" cy="40" rx="46" ry="12" fill="#A3CF86"/>
+    <path d="M58 40V16" stroke="#3C4558" stroke-width="2"/>
+    <path d="M58 16l16 5-16 5z" fill="#2F6FDE"/>
+  </svg>
+</div>
+
+<main class="flow" id="top">
+  <div class="sr-only">
+    <h1>Basil Pozdeev, Kubernetes platform engineer</h1>
+    <p>Kubernetes platform engineer on Azure and AWS, based in Breda, the Netherlands. Freelance since September 2023.</p>
+    <ul>
+      <li>Production-ready AKS cluster provisioning cut from six months to about one hour, with a library of 30+ Terraform modules.</li>
+      <li>161 Kubernetes clusters run as one platform: 146 on Azure (AKS) and 15 on AWS (EKS).</li>
+      <li>Deployments across 150+ clusters cut from 20–30 minutes to near-instant with ArgoCD.</li>
+      <li>100+ Azure Policies enforced as code across 1200+ subscriptions.</li>
+      <li>Disaster recovery with RTO 1 hour and RPO 15 minutes, rehearsed in quarterly game days.</li>
+    </ul>
+    <h2>Experience</h2>
+    <ul>
+      <li>2023 to now: freelance Kubernetes platform and reliability engineer, Netherlands</li>
+      <li>2022 to 2023: senior DevOps engineer, Ctac</li>
+      <li>2020 to 2022: senior system architect, Volksbank</li>
+      <li>2018 to 2020: senior system architect, BNP Paribas Cardif</li>
+      <li>2015 to 2018: senior fullstack engineer, EPAM Systems, Poland</li>
+    </ul>
+    <p>Certified Kubernetes Administrator (CKA). AWS Certified Solutions Architect, Associate.</p>
+  </div>
+
+  <div class="track" aria-hidden="true"></div>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Need a platform built, or one put back in order?</h2>
+    <a class="mail" href="mailto:basil.pozdeev@sediadigital.com">basil.pozdeev@sediadigital.com</a>
+    <p class="avail">Open to freelance contracts, remote or in the Netherlands.</p>
+    <p class="links">
+      <a href="https://www.linkedin.com/in/vpozdeev" rel="me">LinkedIn</a>
+      <a href="https://github.com/vaspoz" rel="me">GitHub</a>
+    </p>
+    <footer class="foot">
+      <p>Designed and built by me. I also make <a href="mailto:basil.pozdeev@sediadigital.com?subject=Website">websites for small businesses around Breda</a>.</p>
+    </footer>
+  </section>
 </main>
 </body>
 </html>

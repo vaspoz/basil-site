@@ -1,1 +1,8 @@
 .DS_Store
+
+# Terraform (local state stays on this machine)
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+crash.log

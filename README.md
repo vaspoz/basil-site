@@ -1,10 +1,13 @@
 # basil-site
 
-Personal career site for Basil Pozdeev. Static HTML/CSS/JS, no build step.
+Personal site of Basil Pozdeev, live at https://sediadigital.com.
+Static HTML/CSS/JS with three.js, no build step, served by GitHub Pages from `main` (repo root).
 
-- `index.html` — picker for the three drafts
-- `v1/` Fleet, `v2/` Modules, `v3/` Lead time
-- `CONTENT.md` — the facts every version uses; edit here first, then in each version
+- `index.html`, `style.css`, `main.js`: the site (a floating-island city built on scroll)
+- `CONTENT.md`: the facts the site draws on
+- `CNAME`: custom domain for GitHub Pages
+- `infra/`: Terraform for the DNS records in the Route53 zone
+- Tag `drafts-v1-v6`: the six design drafts this one was chosen from
 
 ## Preview locally
 
@@ -13,14 +16,19 @@ python3 -m http.server 8080
 # open http://localhost:8080
 ```
 
-## Publish on GitHub Pages (later)
+## DNS
 
-1. Create the GitHub repo and push `main`.
-2. Repo Settings → Pages → Deploy from branch `main`, folder `/`.
-3. Once a version is chosen, copy it to the root (or redirect `index.html` to it).
-4. Custom domain: add a `CNAME` file with `sediadigital.com`, then in Route53 (zone `Z06094801U4NDVJOSDTT1`, account posterito-prod):
-   - `A` apex → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - `AAAA` apex → `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`
-   - `CNAME` `www` → `vaspoz.github.io.`
-   - Leave the Proton MX/TXT/DKIM and the SES records untouched.
-5. Verify the domain in GitHub account settings → Pages, then tick "Enforce HTTPS".
+`infra/` adds the GitHub Pages records to the existing `sediadigital.com` zone:
+apex `A` and `AAAA` to GitHub Pages, and `www` as a `CNAME` to `vaspoz.github.io`.
+It leaves the mail records (Proton, SES) alone. State is local and gitignored.
+
+```sh
+aws sso login --profile posterito-prod
+cd infra
+terraform init
+terraform plan
+terraform apply
+```
+
+Optional: verify the domain in GitHub (account settings → Pages → Add a domain), then apply
+with `-var github_pages_verification=<value>` to create the `_github-pages-challenge` TXT record.
